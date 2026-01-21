@@ -1,6 +1,8 @@
 # javascript
 Curso de JavaScript do CursoemVideo
 
+> Obs: no fim do curso vou formalizar e estruturar tudo.
+
 <details><summary>Anotações:</summary>
 
 PRECISO AJUSTAR ISSO
@@ -17,7 +19,31 @@ PRECISO AJUSTAR ISSO
 
 `var s = 'JavaScript'`
 
-s.length          
+s.length          // quantos caracteres a string tem
+s.toUpperCase()   // tudo para 'MAIÚSCULAS'
+s.toLowerCase()   // tudo para 'minúsculas'
+
+// Formatando números
+
+n1 = 1545.5                                                         // Var para n1
+n1.toFixed(2)                                                       // Aumenta a casa decimal EX: 1545.50
+n1.toFixed(2).replace('.', ',')                                     // Muda de ponto para virgula EX: 1545,50
+n1.toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'})    // Muda para o padrão real R$  EX: R$ 1.545,50
+
+### Operadores
+
+aritméticos                                                                   Cuidado!
+    +  : 5+2  = 7                                                       EX: 5+3/2 = 6.5
+    -  : 5-2  = 3                                                       Lembrar sempre que respeita
+    *  : 5x2  = 10  --Multiplicação                                     a mesma regra que a matématica            
+    /  : 5/2  = 2.5 --Divisão                                           de prioridade entre x e /;
+    %  : 5%2  = 1   --Divisão inteira
+    ** : 5**2 = 25  --Potencia Ex: nesse caso 5 ao quadrado 5x5=25
+atribuição
+relacionais
+lógicos
+ternário
+
 
 <details><summary>Identificadores - VAR</summary>
 
