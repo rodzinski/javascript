@@ -1,102 +1,190 @@
-# javascript
-Curso de JavaScript do CursoemVideo
+# JavaScript
 
-> Obs: no fim do curso vou formalizar e estruturar tudo.
+Curso de **JavaScript** — Curso em Vídeo  
 
-<details><summary>Anotações:</summary>
+> **Observação:** Ao final do curso, este material será revisado, formalizado e estruturado.
 
-PRECISO AJUSTAR ISSO
+---
 
-// Formatando Strings
+## 📌 Anotações
 
-`var s = 'JavaScript'`
+### 🔤 Formatação de Strings
 
-'Eu estou aprendendo s'     // não faz interpolação
+```js
+var s = 'JavaScript'
+```
 
-'Eu estou aprendendo' + s   // usa concatenação
+```js
+'Eu estou aprendendo s'      // Não faz interpolação
+'Eu estou aprendendo ' + s  // Concatenação
+`Eu estou aprendendo ${s}`  // Template string (crase)
+```
 
-`Eu estou aprendendo ${s}`  // usa template string -- com CRASE `
+#### Propriedades e métodos de string
 
-`var s = 'JavaScript'`
+```js
+s.length        // Quantidade de caracteres
+s.toUpperCase() // Converte para MAIÚSCULAS
+s.toLowerCase() // Converte para minúsculas
+```
 
-s.length          // quantos caracteres a string tem
-s.toUpperCase()   // tudo para 'MAIÚSCULAS'
-s.toLowerCase()   // tudo para 'minúsculas'
+---
 
-// Formatando números
+### 🔢 Formatação de Números
 
-n1 = 1545.5                                                         // Var para n1
-n1.toFixed(2)                                                       // Aumenta a casa decimal EX: 1545.50
-n1.toFixed(2).replace('.', ',')                                     // Muda de ponto para virgula EX: 1545,50
-n1.toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'})    // Muda para o padrão real R$  EX: R$ 1.545,50
+```js
+let n1 = 1545.5
+```
 
-### Operadores
+```js
+n1.toFixed(2)                         // 1545.50
+n1.toFixed(2).replace('.', ',')       // 1545,50
+n1.toLocaleString('pt-BR', {
+  style: 'currency',
+  currency: 'BRL'
+})                                   // R$ 1.545,50
+```
 
-aritméticos                                                                   Cuidado!
-    +  : 5+2  = 7                                                       EX: 5+3/2 = 6.5
-    -  : 5-2  = 3                                                       Lembrar sempre que respeita
-    *  : 5x2  = 10  --Multiplicação                                     a mesma regra que a matématica            
-    /  : 5/2  = 2.5 --Divisão                                           de prioridade entre x e /;
-    %  : 5%2  = 1   --Divisão inteira
-    ** : 5**2 = 25  --Potencia Ex: nesse caso 5 ao quadrado 5x5=25
-atribuição
-relacionais
-lógicos
-ternário
+---
 
+## ➕ Operadores
 
-<details><summary>Identificadores - VAR</summary>
+### Aritméticos
 
-- Podem começar com letra, $ ou _
+| Operador | Exemplo | Resultado |
+|--------|--------|-----------|
+| `+` | `5 + 2` | `7` |
+| `-` | `5 - 2` | `3` |
+| `*` | `5 * 2` | `10` |
+| `/` | `5 / 2` | `2.5` |
+| `%` | `5 % 2` | `1` |
+| `**` | `5 ** 2` | `25` |
+
+> ⚠️ **Atenção:** A precedência segue as regras matemáticas.  
+> Exemplo: `5 + 3 / 2 = 6.5`
+
+---
+
+### Relacionais
+
+> O resultado **sempre será booleano** (`true` ou `false`).
+
+```js
+5 > 2    // true
+7 < 4    // false
+8 >= 8  // true
+9 <= 7  // false
+5 == 5  // true
+4 != 4  // false
+```
+
+```js
+5 === '5' // false (tipo diferente)
+5 === 5   // true
+```
+
+#### Exemplos práticos
+
+```js
+preco >= 200.50
+idade < 18
+curso == 'JavaScript'
+n1 != n2
+```
+
+---
+
+### Lógicos
+
+| Operador | Descrição |
+|--------|----------|
+| `!` | Negação |
+| `&&` | Conjunção (E) |
+| `||` | Disjunção (OU) |
+
+```js
+true && true   // true
+true && false  // false
+false || true  // true
+```
+
+#### Exemplos
+
+```js
+idade >= 15 && idade <= 17
+estado == 'RJ' || estado == 'SP'
+salario > 1500 && sexo != 'M'
+```
+
+---
+
+## 🔀 Precedência de Operadores
+
+Ordem (do maior para o menor):
+
+1. `()`  
+2. `**`, `*`, `/`, `%`  
+3. `>`, `<`, `>=`, `<=`  
+4. `!`  
+5. `&&`  
+6. `||`
+
+---
+
+## ❓ Operador Ternário
+
+```js
+teste ? true : false
+```
+
+```js
+media >= 7 ? "Aprovado" : "Reprovado"
+```
+
+---
+
+## 🏷️ Identificadores (VAR)
+
+- Podem começar com **letra**, `$` ou `_`
 - Não podem começar com números
-- É possível usar letras ou números
-- É possível usar acentos e símbolos
-- Não pode conter espaços
-- Não podem palavras reservadas
+- Podem conter letras e números
+- Podem usar acentos e símbolos
+- Não podem conter espaços
+- Não podem ser palavras reservadas
 
-<details><summary>Dicas</summary>
+### 💡 Dicas
+- JavaScript diferencia **maiúsculas e minúsculas**
+- Use nomes coerentes para variáveis
+- Evite ser um *“programador alfabeto”* ou *“programador contador”*
 
-- Maiúsculas e minúsculas fazem diferença
-- Tente escolher nomes coerentes para variáveis
-- Evite se tornar um 'Programador alfabeto' ou um 'Programador contador'
+---
 
-</details>
+## 📦 Data Types
 
-</details>
+### `number`
+```js
+5, 18, -12, 0.5, 3.14
+```
 
-<details><summary>Data Types</summary>
+- `Infinity`
+- `NaN`
 
-
-
-**number**
-5 18 -12 
-0.5 -15.9 3.14 8.0
-
-**number - Infinity**
-
-**number - NaN**
-
-**boolean**
+### `boolean`
+```js
 true
 false
+```
 
-**string**
+### `string`
+```js
 "Google"
 'JavaScript'
-Maria`
+`Maria`
+```
 
-**null**
-
-**undefined**
-
-**object**
-
-**object - Array**
-
-**function**
-
-</details>
-
-</details>
-
-</details>
+### Outros tipos
+- `null`
+- `undefined`
+- `object`
+- `Array`
+- `function`
