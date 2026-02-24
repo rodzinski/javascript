@@ -188,3 +188,41 @@ false
 - `object`
 - `Array`
 - `function`
+
+---
+
+## DOM
+
+DOM = Document Object Model
+
+### Árvore DOM
+
+*Exemplo ex005.html*
+windows
+  location
+  document
+    html
+      head
+        meta
+        title
+      body
+        h1
+        p
+        p
+          strong
+        div
+  history
+
+### Selecionando
+
+por Marca
+  getElementsByTagName()
+por ID 
+  getElementById()
+por Nome
+  getElementsByName()
+por Classe
+  getElementsByClassName()
+por Seletor
+  querySelector()
+  querySelectorAll()
