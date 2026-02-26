@@ -197,7 +197,7 @@ DOM = Document Object Model
 
 ### Árvore DOM
 
-*Exemplo ex005.html*
+*Exemplo aula06/ex005.html*
 windows
   location
   document
@@ -226,3 +226,12 @@ por Classe
 por Seletor
   querySelector()
   querySelectorAll()
+
+### Eventos DOM
+
+#### Funções
+São executados após os eventos
+
+function ação(param){
+  
+}
