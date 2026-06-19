@@ -28,14 +28,20 @@
 
     <script>
         var a = window.document.getElementById('area')
-        function clicar(){
+        a.addEventListener('click', clicar)
+        a.addEventListener('mousecenter', entrar)
+        a.addEventListener('mouseout', sair)
+
+        function clicar() {
             a.innerText = 'Clicou!'
+            a.style.background = 'red'
         }
-        function entrar(){
+        function entrar() {
             a.innerText = 'Entrou!'
         }
-        function sair(){
+        function sair() {
             a.innerText = 'Saiu!'
+            a.style.background = 'green'
         }
     </script>
 </body>

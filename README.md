@@ -229,9 +229,19 @@ por Seletor
 
 ### Eventos DOM
 
+#### Eventos Mouse
+
+mouseenter
+mousemove
+mousedown
+mouseup
+click
+mouseout
+
 #### Funções
 São executados após os eventos
 
 function ação(param){
   
 }
+
